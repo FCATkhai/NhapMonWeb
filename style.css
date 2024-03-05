@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Helvetica', 'arial', sans-serif;
+    font-size: 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
+    width: 1024px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+li {
+    margin-left: 10%;
+ }
+p {
+    text-align: justify;
+ }
+
+th {
+    text-align: right;
+    vertical-align: bottom;
+}
+main {
+    display: grid;
+    grid-area: main;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    'aside'
+    'article'
+    'aside';
+    border: 1px solid #ccc7c8;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+aside {
+    margin: 2px;
+    padding: 5px;
+}
+
+header {
+    grid-area: header;
+    background-image: url(images/header.png);
+    border: 1px solid #ccc7c8;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin-bottom: 2px;
+}
+
+
+/*------------------ header img fly ------------------*/
+header .header-img1 {
+    height: 100px;
+    position: absolute;
+    top: -30px;
+    animation-name: header-img1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+header .header-img2 {
+    height: 70px;
+    position: absolute;
+    top: -5px;
+    animation-name: header-img2;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+header .header-img3 {
+    height: 80px;
+    position: absolute;
+    top: 0px;
+    animation-name: header-img3;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes header-img1 {
+    from {
+        left: 80%;
+    }
+    to {
+        left: 30%;
+    }
+}
+
+@keyframes header-img2 {
+    from {
+        left: 80%;
+    }
+    to {
+        left: 45%;
+    }
+}
+
+@keyframes header-img3 {
+    from {
+        left: 80%;
+    }
+    to {
+        left: 63%;
+    }
+}
+
+
+/* ------------------ nav ------------------*/
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+}
+nav {
+    display: flex;
+    margin-top: 20px;
+}
+nav a {
+    margin: 3px;
+    padding: 2px 4px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background-color: #ffffff80;
+    color: #ed4190;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+    /* box-shadow: 0 0 3px 0 #00000066, 0 0 2px 0 #0000004d; */
+    box-shadow: 0 0 3px 0 #00000066;
+}
+
+nav a:visited {
+    color: #ed4190;
+}
+
+nav a:hover {
+    color: #fff;
+    background-color: #ed4190;
+
+}
+
+.search_and_cart {
+    margin-top: 20px;
+    padding-top: 3px;
+}
+
+.search_and_cart input {
+    font-size: 17px;
+}
+
+.search_and_cart .fa-magnifying-glass {
+    padding: 4px;
+    color: #fff;
+    background-color: #cddc39;
+}
+
+.search_and_cart .fa-magnifying-glass:hover {
+    cursor: pointer;
+}
+
+.search_and_cart .fa-cart-shopping {
+    padding: 4px;
+    color: #ed4190;
+    background-color: #cddc39;
+}
+
+.search_and_cart .fa-cart-shopping:hover {
+    cursor: pointer;
+}
+/* ------------------ article ------------------ */
+article {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+h1 {
+    margin: 12px 0 16px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 34px;
+    color: #f90B6D;
+    font-size: 28px;
+    text-transform: uppercase;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+h1::after {
+    position: absolute;
+    /* margin: 12px 16px; */
+    /* inset: 0;
+    margin: auto; */
+    width: 200px;
+    height: 3px;
+    content: "";
+    /* transform: rotateX(-12deg) translateX(50%); */
+    background: radial-gradient(#cddc39, #fff);
+}
+
+h2 {
+    margin: 5px 0 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 28px;
+    color: #f90B6D;
+    font-size: 24px;
+}
+
+h3 {
+    margin: 5px 0 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 24px;
+    color: #f90B6D;
+    font-size: 20px;
+}
+/* ------------------ Gioi thieu ------------------ */
+section .Gioi_thieu {
+    padding: 0 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+section .Gioi_thieu p {
+    width: 69%;
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 0 5px;
+}
+
+section .Gioi_thieu .loai1 img {
+    width: 30%;
+}
+
+section .Gioi_thieu.loai2 {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+section .Gioi_thieu.loai2 video {
+    max-width: 300px;
+}
+
+#hd_lam_sua_chua {
+    column-count: 2;
+}
+
+#hd_lam_sua_chua h3{
+    break-before: column;
+}
+/* ------------------ order ------------------- */
+
+.order_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+.order_item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ed4190;
+    border-radius: 5px;
+    width: 100%;
+    height: 150px;
+    padding-top: 5px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.order_item img{
+    width: 30%;
+}
+
+/* ------------------ footer ------------------ */
+footer {
+    grid-area: footer;
+    display: flex;
+    border: 1px solid #ccc7c8;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin-top: 2px;
+    justify-content: center;
+}
+
+footer p {
+    padding: 15px;
+    font-size: 16px;
+}
+
+footer .fa-brands {
+    padding: 15px 5px;
+}
+#top-link {
+    padding: 10px;
+    margin: 0 10px 5px 0;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 100;
+}
+#top-link img {
+    width: 70px;
+}
+
+.order {
+    max-width: 100px;
+}
+
+/* ------------------------- san pham page --------------------------- */
+
+
+section.nhom_san_pham {
+    display: flex;
+    margin: 3px;
+
+    flex: 1;
+    color: #ed4190;
+
+}
+
+section div.san_pham {
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+    padding: 10px;
+    border: solid 1px #bdb7d9 ;
+    border-radius: 5px;
+    width: 100%;
+    color: #000;
+    text-align: justify;
+    background: linear-gradient(to top,#cddc39 0%, rgba(0, 0, 0, 0) 10%);
+
+}
+section div.san_pham h2 {
+    align-self: center;
+}
+
+section div.san_pham img {
+    align-self: center;
+}
+
+section div.san_pham p {
+    display: flex;
+    flex-direction: column;
+}
+
+
+span.soluong {
+    /* position: fixed; */
+    /* display: flex; */
+    /* color: #ed4190; */
+    align-self: center;    
+}
+
+/* ------------------------- gioi thieu page --------------------------- */
+
+main#gioi_thieu_page {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+    'article aside';
+    border: 1px solid #ccc7c8;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+article#gioi_thieu_article {
+    /* all:unset; */
+    display: inline-block;
+    grid-area: article;
+}
+article#gioi_thieu_article img {
+    width: 750px;
+}
+
+aside#gioi_thieu_aside {
+    grid-area: aside;
+    text-align: center;
+
+}
+/* ------------------------- lien he page --------------------------- */
+
+#lienhe_page {
+    justify-content: center;
+}
+
+#lienhe_page th {
+    text-align: right;
+    vertical-align: bottom;
+}
+
+
+#lienhe_page table {
+    align-items: end;
+}
+
+.fa-location-dot {
+    background-color: #cddc39;
+    width: min-content;
+    padding: 5px 10px;
+    display: inline;
+    margin: 0 5px;
+
+}
+
+#dia_chi {
+    display: flex;
+    align-items: center;
+}
+
+#dia_chi p {
+    font-weight: 500;
+}
+
+form .fa-solid {
+    background-color: #cddc39;
+    color: #fff;
+    padding: 5px 10px;
+    width: 40px;
+    text-align: center;
+}
+form input {
+    padding: 5px;
+    font-size: 17px;
+}
+
+
+/* ------------------------- tin tuc page --------------------------- */
+main#tintuc_page {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+    'aside article';
+    grid-template-rows: repeat(100, auto);
+    grid-template-columns: 1fr 3fr;
+    border: 1px solid #ccc7c8;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+main#tintuc_page img{
+    width: 100%;
+}
+
+main#tintuc_page article {
+    grid-column: 2 / span;
+}
+
+main#tintuc_page article .content_container {
+    display: flex;
+}
+
+main#tintuc_page aside {
+    grid-column: 1 / span;
+    grid-row: 1 / -1;
+}
+
+
+main#tintuc_page article p {
+    width: 69%;
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 0 5px;
+}
+
+main#tintuc_page article img {
+    width: 30%;
+}
+
+/* ------------------------- dang ky page --------------------------- */
+main#dangky_page {
+    justify-content: center;
+}
+
+main#dangky_page th {
+    vertical-align: baseline;
+}
+
+/* ------------------------- dang nhap page --------------------------- */
+main#dangnhap_page {
+    justify-content: center;
+}
+
+main#dangnhap_page img{
+    max-width: 250px;
+}

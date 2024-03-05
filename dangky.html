@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Đăng Ký Thành Viên</title>
+
+</head>
+<body>
+    <header>
+        <a id="#top" href="trangchu.html"><img src="images/logo.png"/></a>
+        <img src="images/header-img1.png" alt="" class="header-img1">
+        <img src="images/header-img2.png" alt="" class="header-img2">
+        <img src="images/header-img3.png" alt="" class="header-img3">
+       <div class="nav_container">
+            <nav>
+                <a href="trangchu.html">Trang Chủ</a>
+                <a href="gioithieu.html">Giới Thiệu</a>
+                <a href="sanpham.html">Sản Phẩm</a>
+                <a href="tintuc.html">Tin Tức</a>
+                <a href="dangnhap.html">Đăng nhập</a>
+                <a href="dangky.html">Đăng Ký</a>
+                <a href="lienhe.html">Liên Hệ</a>
+            </nav>
+            <div class="search_and_cart">
+                <input type="text" placeholder="Nhập nội dung cần tìm...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+    
+            </div>
+       </div>
+    </header>
+    <main id="dangky_page">
+            <h1>ĐĂNG KÝ</h1>
+            <form method="post" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <th><label for="email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </label>
+                        </th>
+                        <td>
+                            <input 
+                                id="email"
+                                type="email"
+                                placeholder="Vui lòng nhập email"
+                                required
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="password"><i class="fa-solid fa-key"></i></label></th>
+                        <td>
+                            <input
+                                id="password"
+                                type="password"
+                                placeholder="Vui lòng nhập mật khẩu"
+                                required
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="re-password"><i class="fa-solid fa-key"></i></label></th>
+                        <td>
+                            <input
+                                id="re-password"
+                                type="password"
+                                placeholder="Vui lòng nhập mật khẩu"
+                                required
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>
+                                <i class="fa-solid fa-users"></i>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="radio" name="memberType" id="Bac">
+                            <label for="Bac">Bạc</label>
+                            <input type="radio" name="memberType" id="Vang">
+                            <label for="Vang">Vàng</label>
+                            <input type="radio" name="memberType" id="BachKim">
+                            <label for="BachKim">Bạch Kim</label>
+                        </td>
+                    </tr>
+                        <th>
+                            <label for="avatar">
+                                <i class="fa-solid fa-image-portrait"></i>
+                            </label>
+                        </th>
+                        <td>
+                            <input type="file" name="" id="avatar" accept=".png, jpg, jpeg">
+                        </td>
+                    <tr>
+                        <td colspan="2"><strong>Thông qua việc tạo tài khoản, bạn đồng ý với</strong> <a href="#">Điều khoản & quyền riêng tư của chúng tôi</a>.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="reset" value="Huỷ">
+                            <input type="submit" value="Đăng Ký">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+    </main>
+    <footer>
+        <p>© 2021 Bản quyền thuộc về FreezeVN</p>
+            
+            <a href=""><i class="fa-brands fa-facebook-f" style="color: #ed4190;"></i></a>
+            <a href=""><i class="fa-brands fa-twitter" style="color: #ed4190;"></i></a>
+            <a href=""><i class="fa-brands fa-pinterest" style="color: #ed4190;"></i></a>
+            <a href="#top" id="top-link"><img src="images/top.png" alt="" ></a>
+        
+    </footer>
+</body>
+<script src="https://kit.fontawesome.com/965ecd562f.js" crossorigin="anonymous"></script>
+
+</html>
